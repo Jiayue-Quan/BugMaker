@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.bodySection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    
+}
