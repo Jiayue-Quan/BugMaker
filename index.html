@@ -3,35 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bug Maker !!!11!11!!</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Test scrollbar</title>
+    <link rel="stylesheet" href="index.css"/>
 </head>
 <body>
-    <form id="customImageForm">
-        <label for="customImage">Upload your own sprite! (square image for best effect)</label>
-        <input type="file" accept="image/png, image/jpeg" id="customImage" multiple/>
-        <button type="button">Submit</button>
-    </form>
-    
-    <div class="bug">
-        <div class="bodySection" id="head">
-            <button class="back">Back</button>
-            <img src="images/apple.png"/>
-            <button class="next">Next</button>
+    <div class="pageLeft">
+        <div class="ordersSelection">
+            <button>Insect</button>
+            <button>Arachnid</button>
+            <button>Idk</button>
+            <button>Custom</button>
         </div>
-        <div class="bodySection" id="middle">
-            <button class="back">Back</button>
-            <img id="middle" src="images/microsoft.png"/>
-            <button class="next">Next</button>
+        <div class="spriteSelectionBox">
+            <div class="bodyParts">
+                <button>Antennae</button>
+                <button>Heads</button>
+                <button>Torsos</button>
+                <button>Legs</button>
+                <button>Wings</button>
+            </div>
+            <div class="bodyPartsSprites"></div>
         </div>
-        <div class="bodySection" id="bottom">
-            <button class="back">Back</button>
-            <img id="bottom" src="images/meta.png"/>
-            <button class="next">Next</button>
+        <div class="orderDescription"></div>
+    </div>
+    <div class="pageRight">
+        <p>Name</p>
+        <div class="canvas" id="canvas">
+            <img class="toMove" src="./sprites/beetle_torso.png" />
+            
+            <div class="slidecontainer">
+                <input id="horizontalSlider" type="range" min="1" max="100" value="50">
+            </div>
+            
         </div>
     </div>
     
+    
 </body>
+<script src="sliders.js">
+    
 
-<script src="script.js"></script>
+
+
+</script>
 </html>

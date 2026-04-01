@@ -1,16 +1,119 @@
-.bug {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-.bodySection {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 img {
     width: 200px;
     height: 200px;
     display: block;
 }
+.toMove {
+    position: absolute;
+    max-width: 300px;
+}
+body {
+    display: flex;
+}
+.pageLeft {
+    grid-template-areas: 
+    "ordersSelection ordersSelection"
+    "spriteSelectionBox orderDescription";
+    grid-template-columns: 4fr 3fr;
+    column-gap: 20px;
+    width: 60vw;
+}
+.pageRight {
+    flex: 1 0 0%;
+}
+
+.pageLeft, .pageRight {
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    padding: 10px;
+}
+
+.ordersSelection {
+    grid-area: ordersSelection;
+    border: 1px solid blue;
+}
+.spriteSelectionBox {
+    grid-area: spriteSelectionBox;
+    height: 75vh;
+    border: 1px solid green;
+
+    display: flex;
+    flex-direction: row; 
+}
+.orderDescription {
+    grid-area: orderDescription;
+    height: 75vh;
+    border: 1px solid red;
+}
+
+.bodyParts {
+    width: 30%;
+    
+    display: flex;
+    flex-direction: column;
+}
+.bodyPartsSprites {
+    background-color: green;
+    width: 70%;
+}
+button:hover {
+    cursor: pointer;
+}
+.bodyParts button {
+    height: 20%;
+}
+.canvas {
+    width: 100%;
+    height: 75vh;
+    border: 1px solid black;
+    position: relative;
+}
+
+.ordersSelection button {
+    width: 20%;
+    background-color: rgb(183, 248, 255);
+    border: none;
+    border-radius: 10px;
+    margin: auto none;
+}
+
+/* sliders */
+.slidecontainer {
+  position: absolute;
+  bottom: 0px;
+
+  width: 100%;
+  margin: 0;
+}
+#horizontalSlider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 100%;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  margin: 0;
+}
+
+#horizontalSlider:hover {
+  opacity: 1;
+}
+
+#horizontalSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+#horizontalSlider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
